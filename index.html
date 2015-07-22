@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <title>Shooter</title>
+    <style>
+        #score_text {
+            display: none;
+            position: absolute;
+            font-size: 25px;
+            color: red;
+            margin-left: 355px;
+        }
+        #score_value, 
+        #life_value {
+            font-size: 25px;
+        }
+        button {
+            position: absolute;
+            width: 100px;
+            padding: 10px 0;
+            background: #299a0b;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            font-style: italic;
+            border: none;
+            border-radius: 5px;
+            box-shadow: inset 0px 0px 8px 2px #428709;
+            text-shadow: 1px 1px 1px #666;
+            margin-top: 20px;
+            margin-left: 130px;
+        }
+        canvas {
+            position: absolute;
+            margin-top: 95px;
+        }
+        #result {
+            display: none;
+            position: absolute;
+            font-size: 25px;
+            color: blueviolet;
+            margin-top: 62px;
+            margin-left: 254px;
+        }
+    </style>
+</head>
+<body>
+    <header><h2>Shooter</h2></header>
+    <section id="game_description">
+        Press A/S keys to move the space-ship left/right. Press and hold SPACE-BAR to fire.
+    </section>
+    <section id="panel">  
+        <button class="start_game">Start</button>
+        <p id="score_text">Remaining Life: <span id="life_value"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Score is: <span id="score_value"></span>&nbsp;</p>
+        <p id="result">Game Over !!</p>
+        <canvas id="canvas_region" width="700" height="497"></canvas>
+    </section>
+    <audio id="alien_explosion">
+        <source src="sounds/alien_explosion.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="bullet">
+        <source src="sounds/bullet.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="spaceship_movement">
+        <source src="sounds/spaceship_movement.mp3" type="audio/mpeg">
+    </audio>
+    <script src="scripts/jquery_1.9.1.js"></script>
+    <script src="scripts/canvas.js"></script>
+</body>
+</html>
